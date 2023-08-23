@@ -21,6 +21,11 @@ function main() {
       delay: 10000,
     },
   });
+  
+  function requestFullscreen() {
+    const btn = document.querySelector('.swiper');
+    btn.requestFullscreen();
+  }
 }
 
 main();
