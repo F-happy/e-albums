@@ -1,13 +1,16 @@
 function main() {
   const swiperWrapper = document.querySelector('.swiper>.swiper-wrapper');
   window.images.forEach((element) => {
+    const swiperBox = (li = document.createElement('div'));
+    swiperBox.className = 'swiper-slide';
     const imageBox = (li = document.createElement('div'));
-    imageBox.className = 'swiper-slide';
+    imageBox.className = 'image-box';
     const image = document.createElement('img');
     image.className = 'image';
     image.src = `./images/${element}`;
     imageBox.appendChild(image);
-    swiperWrapper.append(imageBox);
+    swiperBox.appendChild(imageBox);
+    swiperWrapper.append(swiperBox);
   });
 
   const swiper = new Swiper('.swiper', {
